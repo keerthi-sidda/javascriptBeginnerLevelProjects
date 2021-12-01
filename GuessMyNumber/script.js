@@ -31,12 +31,14 @@ document.querySelector('.again').addEventListener('click',
 document.querySelector('.check').addEventListener('click',
     function(){
         const guess = Number(document.querySelector('.guess').value);
+        //when number equals null
         if(!guess){
             //document.querySelector('.message').textContent = '⛔ No Number!';
             displayMessage('⛔ No Number!');
             displayScore(score);
         }
         else{
+            //when number equals guessed number
             if(secretNumber == guess){
                 //document.querySelector('.message').textContent = '✅ Correct Number!';
                 displayMessage('✅ Correct Number!');
